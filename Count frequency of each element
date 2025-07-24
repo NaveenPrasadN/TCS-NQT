@@ -1,0 +1,14 @@
+package Arrays;
+import java.util.*;
+public class Countfrequencyofeachelement {
+	public static void main(String[]args) {
+		int []arr = {4, 2, 4, 5, 2, 3, 4};
+
+		Map<Integer,Integer> freq=new HashMap<>();
+		for(int num:arr ) {
+			freq.put(num,freq.getOrDefault(num,0)+1);
+		}
+		System.out.println("frequencies"+freq);
+		}
+
+}
