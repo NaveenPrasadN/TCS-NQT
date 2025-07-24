@@ -1,0 +1,47 @@
+package Arrays;
+import java.util.*;
+public class SecondSmallestandSecondLargest {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int[] arr = {4, 2, 7, 2, 9, 1, 9};
+		int smallest=Integer.MAX_VALUE;
+		int secondsmallest=Integer.MAX_VALUE;
+		int largest=Integer.MIN_VALUE;
+		int secondlargest=Integer.MIN_VALUE;
+		
+		for(int num:arr) {
+			if(num<smallest) {
+				secondsmallest=smallest;
+				smallest=num;
+			}
+			else if(num>smallest && num<secondsmallest) {
+				secondsmallest=num;
+			}
+			if(num>largest) {
+				secondlargest=largest;
+				largest=num;
+			}
+			else if(num<largest&& num>secondlargest) {
+				secondlargest=num;
+			}
+		}
+		if(secondsmallest==Integer.MAX_VALUE) {
+			System.out.println("No second smallest element");
+		}
+		else {
+			System.out.println("second smallest: "+secondsmallest);
+		}
+		if(secondlargest==Integer.MIN_VALUE) {
+			System.out.println("No second largest element");
+		}
+		else {
+			System.out.println("second largest: "+secondlargest);
+		}
+		
+		
+		
+
+	}
+
+}
